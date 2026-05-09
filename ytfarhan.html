@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Linktree | Modern Europe</title>
+    <!-- Google Fonts: Inter Black -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-blue: #0052ff;
+            --accent-pink: #ff0055;
+            --secondary-bg: #f2f2f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 25px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 420px;
+        }
+
+        header {
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 0.85;
+            letter-spacing: -4px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .link-card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 24px;
+            background: var(--secondary-bg);
+            text-decoration: none;
+            color: var(--text-color);
+            border-radius: 4px; /* Sudut tajam khas desain Eropa */
+            transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .link-card:hover {
+            background: #e8e8e8;
+        }
+
+        /* Gaya Khusus Kolom Download di Tengah */
+        .download-center {
+            background: var(--text-color);
+            color: var(--bg-color);
+            margin: 15px 0;
+        }
+        
+        .download-center:hover {
+            background: #222;
+        }
+
+        .label {
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            flex: 1;
+        }
+
+        .icon {
+            font-size: 1.4rem;
+            width: 40px;
+        }
+
+        /* Animasi Corak Warna (Radial Expansion) */
+        .color-splash {
+            position: absolute;
+            pointer-events: none;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: splash 0.8s ease-out forwards;
+        }
+
+        @keyframes splash {
+            0% { width: 0; height: 0; opacity: 0.6; }
+            100% { width: 800px; height: 800px; opacity: 0; }
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>YT<br>ELFARHAN</h1>
+        </header>
+
+        <div class="links-container">
+            <!-- 1. WhatsApp -->
+            <a href="https://wa.me/6285166445336?text=Halo%20El" class="link-card ripple-trigger" data-color="#25D366">
+                <i class="fa-brands fa-whatsapp icon"></i>
+                <span class="label">WhatsApp </span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <!-- 2. Instagram -->
+            <a href="https://instagram.com/akun_kamu" class="link-card ripple-trigger" data-color="#E1306C">
+                <i class="fa-brands fa-instagram icon"></i>
+                <span class="label">Instagram</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <!-- 3. KOLOM DOWNLOAD (DI TENGAH) -->
+            <!-- GANTI LINK DOWNLOAD DI SINI -->
+            <a href="https://google.com/download-file-kamu" class="link-card download-center ripple-trigger" data-color="#0052ff">
+                <i class="fa-solid fa-cloud-arrow-down icon"></i>
+                <span class="label">Download File</span>
+                <i class="fa-solid fa-download"></i>
+            </a>
+
+            <!-- 4. Group WhatsApp -->
+            <a href="https://chat.whatsapp.com/invite_code" class="link-card ripple-trigger" data-color="#128C7E">
+                <i class="fa-solid fa-users icon"></i>
+                <span class="label">Group WhatsApp</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <!-- 5. Group Telegram -->
+            <a href="https://t.me/+q2xJlGkxdLcwNjY0" class="link-card ripple-trigger" data-color="#0088cc">
+                <i class="fa-brands fa-telegram icon"></i>
+                <span class="label">Group Telegram</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <!-- 6. Owner Telegram -->
+            <a href="https://t.me/ellfarhan1717" class="link-card ripple-trigger" data-color="#0088cc">
+                <i class="fa-solid fa-user-check icon"></i>
+                <span class="label">Owner Telegram</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <footer>
+            ELFARHAN &copy; 2024 - 2026
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('.ripple-trigger').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                // Buat elemen animasi
+                const splash = document.createElement('span');
+                splash.classList.add('color-splash');
+                
+                // Ambil warna dari data-color masing-masing kolom
+                const color = this.getAttribute('data-color');
+                splash.style.backgroundColor = color;
+
+                // Tentukan posisi klik
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                splash.style.left = `${x}px`;
+                splash.style.top = `${y}px`;
+
+                this.appendChild(splash);
+
+                // Hapus elemen setelah animasi selesai agar tidak menumpuk
+                setTimeout(() => {
+                    splash.remove();
+                }, 800);
+            });
+        });
+    </script>
+
+</body>
+</html>
